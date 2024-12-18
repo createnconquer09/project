@@ -1,0 +1,951 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+}
+
+h5 {
+    text-decoration: none;
+
+
+
+}
+
+span {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.801);
+
+}
+
+h6 {
+    font-size: 1.1rem;
+    color: white;
+}
+
+body {
+    background-image: url(Images/gidon-wessner-eXSP4A3fwSE-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Navigation*/
+
+nav .navigation
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #ffffff;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 10px;
+  right: 197px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: rgb(190, 233, 125);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 50px;
+  height: 8px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed84;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+nav {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    width: 84vw;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+nav img {
+    width: 300px;
+    cursor: pointer;
+}
+
+nav .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .navigation ul li {
+    list-style: none;
+    margin-left: 40px;
+
+}
+
+nav .navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav .navigation ul li a:hover {
+    color: rgb(190, 233, 125);
+    transition: 0.2s ease;
+}
+
+/*Home*/
+
+#home {
+    background-image: url(Images/pexels-rrojasfoto-3608804.jpg);
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h2 {
+    color: rgba(255, 255, 255, 0.873);
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding-bottom: 70px;
+}
+
+#home p {
+    color: rgba(255, 255, 255, 0.94);
+    font-size: large;
+    line-height: 25px;
+    letter-spacing: 1px;
+    width: 50%;
+}
+
+#home .btn {
+    margin-top: 120px;
+}
+
+#home a {
+    text-decoration: none;
+    font-size: large;
+    padding: 13px 35px;
+    background-color: rgba(255, 255, 255, 0.766);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+#home a.LM:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    transition: .3s ease;
+}
+
+#home a.VC:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    transition: .3s ease;
+}
+
+#features p {
+    font-size: large;
+}
+
+/*features*/
+
+#features {
+    padding: 5vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#features h1 {
+    color: aliceblue;
+    margin-bottom: 50px;
+}
+
+.slider-wrapper {
+    position: relative; /* Position relative to allow positioning of child elements */
+    width: 80%; /* Set a fixed width of 80% of the container's width */
+    max-width: 450px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the slider horizontally */
+    overflow: hidden; /* Hide any overflowing content */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Slider container */
+.slider {
+    display: flex; /* Use flexbox layout to align images */
+    width: 100%; /* Slider takes up the full width of the slider-wrapper */
+    transition: transform 1s ease; /* Animation for transform changes */
+}
+
+/* Styling for each image in the slider */
+.slider img {
+    flex: 0 0 100%; /* Each image takes up 100% of the slider width */
+    width: 100%; /* Set image width to 100% */
+    object-fit: cover; /* Images will cover the slider area, maintaining aspect ratio */
+}
+
+/* Navigation dots container */
+.slider-nav {
+    display: flex; /* Align dots horizontally */
+    column-gap: 0.5rem; /* Space between dots */
+    position: absolute; /* Position absolutely relative to the slider-wrapper */
+    bottom: 1rem; /* Distance from the bottom of the slider-wrapper */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the dots container */
+    z-index: 1; /* Ensure navigation dots are above other content */
+}
+
+/* Styling for each navigation dot */
+.slider-nav a {
+    width: 0.5rem; /* Size of each dot */
+    height: 0.5rem;
+    border-radius: 50%; /* Make dots circular */
+    background-color: #fff; /* White color for dots */
+    opacity: 0.75; /* Slightly transparent dots */
+    transition: opacity ease 250ms; /* Smooth transition for opacity changes */
+}
+
+/* Hover effect for navigation dots */
+.slider-nav a:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
+
+
+
+
+
+
+/*Courses*/
+
+#Courses {
+    padding: 8vw 8vw 0 8vw;
+    text-align: center;
+}
+
+#Courses h1 {
+    margin: 5vw 8vw 0 8vw;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+#Courses .course-base {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+    background-color: rgba(255, 255, 255, 0.241);
+    box-shadow: 2px 4px 10px rgb(0, 0, 0);
+    border-radius: 30px;
+    width: 80vw;
+    height: 2300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#Courses .course-base img {
+    width: 40vw;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+
+
+#Courses h5 {
+    font-size: 30px;
+    color: #ffffffbe;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-style: normal;
+}
+
+/* contact us */
+
+
+#Contact .parent1 {
+    text-align: center;
+    background-color: #f1eded59;
+    width: 28vw;
+    height: 430px;
+    border-radius: 30px;
+    position: relative;
+    top: 160px;
+    left: 300px;
+    margin-bottom: 100px;
+}
+
+#Contact .parent1 .reach-us h1 {
+    font-size: 30px;
+    color: #fcfafa;
+    font-family: "Baloo Bhai 2", sans-serif;
+    position: relative;
+    top: 40px;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+#Contact .parent1 .reach-us a {
+    font-size: 30px;
+    color: #fcfafa;
+    font-family: "Baloo Bhai 2", sans-serif;
+    position: relative;
+    top: 40px;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#Contact .parent1 .reach-us span {
+    font-size: 70px;
+}
+
+
+
+#Contact .parent2 {
+    text-align: center;
+    background-color: #f1eded59;
+    width: 28vw;
+    height: 430px;
+    border-radius: 30px;
+    position: relative;
+    left: 800px;
+    top: 100px;
+}
+
+#Contact .parent2 .connect h1 {
+    color: #fcfafa;
+    font-size: 30px;
+    position: relative;
+    top: 60px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    text-decoration: underline;
+}
+
+#Contact .parent2 .connect p {
+    color: #fcfafa;
+    font-size: 30px;
+    position: relative;
+    top: 80px;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+#Contact .parent2 .connect span {
+    font-size: 70px;
+}
+
+footer {
+    padding: 2vw;
+    margin-top: 20vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer li {
+    list-style: none;
+    color: #d1c1c1d2;
+    padding: 10px 0;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d1c1c1;
+}
+
+footer .material-symbols-outlined:hover {
+    color: deeppink;
+    background-color: white;
+
+}
+
+footer .material-symbols-outlined {
+    font-size: 100px;
+    cursor: pointer;
+}
+
+
+
+@media(max-width:1024px) {
+    nav {
+        width: 125vw;
+    }
+    #menuToggle{
+
+        display: block;
+        position: relative;
+        right: 115px;
+        
+        }
+    .slider-wrapper {
+            position: relative;
+            left: 200px; /* Position relative to allow positioning of child elements */
+            width:500px; /* Set a fixed width of 80% of the container's width */
+            max-width: 400vh;/* Maximum width for larger screens */
+            margin: 0 auto; /* Center the slider horizontally */
+            overflow: hidden; /* Hide any overflowing content */
+            padding: 0; /* Remove padding */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+    #home {
+        width: 139vw;
+        height: 800px;
+    }
+
+    #features .fea-base {
+        display: flex;
+        width: 122vw;
+        height: 25px;
+        margin-top: 50px;
+    }
+    #features h1{
+        position: relative;
+        left: 200px;
+    }
+    #Courses h1{
+        position: relative;
+        left: 200px;
+        margin-bottom: 50px;
+    }
+
+    #Courses .course-base {
+        width: 124vw;
+        height: 2200px;
+    }
+
+    #Courses .course-base img {
+        width: 60vw;
+    }
+
+    #Contact .parent1 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 40vw;
+        height: 430px;
+        border-radius: 30px;
+        position: relative;
+        top: 160px;
+        left: 250px;
+        margin-bottom: 100px;
+    }
+
+    #Contact .parent2 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 40vw;
+        height: 470px;
+        border-radius: 30px;
+        position: relative;
+        left: 750px;
+        top: 130px;
+    }
+
+    footer {
+        padding: 8vw;
+        margin-top: 35vw;
+        width: 123vw;
+        background-color: #101c32;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+}
+@media (max-width:700px){
+    nav{
+        width:225vw;
+        height: 340px;
+    }
+    #home {
+        width: 250vw;
+        height: 1300px;
+    }
+    .slider-wrapper{
+        position: relative;
+        width: 150vw;
+    }
+    #features h1{
+        position:relative;
+        margin-left: 370px;
+        font-size: 70px;
+        
+    }
+    #Courses h1{
+        position: relative;
+        margin-left: 400px;
+        font-size: 80PX;
+    }
+    #Courses .course-base{
+        width: 230VW;
+    }
+    
+    
+
+    footer{
+        width: 235vw;
+    }
+}
+
+@media (max-width:800px){
+
+    #menuToggle{
+
+    display: block;
+    position: relative;
+    right: 75px;
+    
+    }
+    #Courses{
+        margin-top:120px ;
+    }
+    #Courses h1{
+        position: relative;
+        left: 100px;
+    }
+    #features h1{
+        position: relative;
+        left: 100px;
+    }
+    #Courses .course-base img {
+        width: 85vw;
+    }
+    #Contact .parent2 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 52vw;
+        height: 470px;
+        border-radius: 30px;
+        position: relative;
+        left: 600px;
+        top: 180px;
+    }
+    #Contact .parent1 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 52vw;
+        height: 430px;
+        border-radius: 30px;
+        position: relative;
+        top: 160px;
+        left: 250px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width:500px){
+    nav{
+        width:303vw;
+        height: 340px;
+    }
+    nav img{
+        height: 200px;
+        width: 700px;
+    }
+    #menuToggle
+    {
+      display: block;
+      position: relative;
+      top: 10px;
+      right: 20px;
+    
+    }
+    nav .navigation .menuToggle span{
+        height: 500px;
+    }
+    #menuToggle span{
+     width: 70px;
+     height: 12px;
+    }
+    
+    
+    nav .navigation ul li a{
+        font-size: 35px;
+    }
+    #menu li
+    {
+    padding: 10px 0;
+    font-size: 48px;
+    }
+    .slider-wrapper {
+        position: relative;
+        left: 150px; /* Position relative to allow positioning of child elements */
+        width:1000px; /* Set a fixed width of 80% of the container's width */
+        max-width: 400vh;/* Maximum width for larger screens */
+        margin: 0 auto; /* Center the slider horizontally */
+        overflow: hidden; /* Hide any overflowing content */
+        padding: 0; /* Remove padding */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    #home{
+        width: 320vw;
+        height: 3000px;
+    }
+    #home h2{
+        font-size: 120px;
+        margin-bottom: 150px;
+    }
+    #home p{
+        font-size: 50px;
+        line-height: 70px;
+    }
+    #home .btn a{
+        font-size: 40px;
+    }
+    #features .fea-base {
+        width: 300vw;
+    }
+    #features h1{
+        position: relative;
+        left:65px;
+    }
+    #Courses h1{
+        position: relative;
+        left:60px;
+    }
+    #Courses{
+        margin-top:350px ;
+    }
+    #Courses .course-base {
+        width: 305vw;
+    }
+    #Courses .course-base img {
+        width: 150vw;
+    }
+    #Contact .parent1 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 123vw;
+        height: 430px;
+        border-radius: 30px;
+        position: relative;
+        top: 160px;
+        left: 110px;
+        margin-bottom: 100px;
+    }
+    #Contact .parent2 {
+        text-align: center;
+        background-color: #f1eded59;
+        width: 123vw;
+        height: 470px;
+        border-radius: 30px;
+        position: relative;
+        left: 640px;
+        top: 180px;
+    }
+    footer {
+        padding: 8vw;
+        margin-top: 100vw;
+        width: 305vw;
+        background-color: #101c32;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .aboutdiscrib{
+        position: relative;
+        top: 300px;
+        right: 100px;
+        
+    }
+    .aboutdiscrib h1{
+    color: rgba(252, 251, 251, 0.762);
+    padding: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    
+}
+.aboutdiscrib p{
+    color: rgba(252, 251, 251, 0.836);
+    padding: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    
+}
+.aboutdiscrib .info{
+    background-color: rgba(255, 255, 255, 0.297);
+    font-size: x-large;
+    width: 600px;
+    border-radius: 20px;
+    position: relative;
+    top: 60px;
+    left: 150px;
+}
+.aboutdiscrib .bgimg img{
+    height: 630px;
+    width: 490px;
+    position: relative;
+    bottom: 565px;
+    left: 850px;
+    border-radius: 20px;
+}
+.aboutdiscrib .bgimg3 img{
+    height: 550px;
+    width: 1200px;
+    position: relative;
+    bottom: 460px;
+    left: 145px;
+    border-radius: 20px;
+    
+}
+.aboutdiscrib .backbtn{
+    padding: 20px;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    font-size: larger;
+    
+}
+    
+    
+    
+     
+}
+@media (max-width:370px){
+    nav{
+        width:350vw;
+        height: 340px;
+    }
+    #home{
+        width: 370vw;
+    }
+    .slider-wrapper{
+        position: relative;
+        left: 65px;
+    }
+    #Courses .course-base {
+        width: 350vw;
+    }
+    #Contact{
+        position: relative;
+        left: 100px;
+    }
+    footer{
+        width: 355vw;
+    }
+}
+@media (max-width:700px){
+    
+}
+    
+    
+
+/* about us page */
+
+
+.aboutdiscrib h1{
+    color: rgba(252, 251, 251, 0.762);
+    padding: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    
+}
+.aboutdiscrib p{
+    color: rgba(252, 251, 251, 0.836);
+    padding: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    
+}
+.aboutdiscrib .info{
+    background-color: rgba(255, 255, 255, 0.297);
+    font-size: x-large;
+    width: 600px;
+    border-radius: 20px;
+    position: relative;
+    top: 60px;
+    left: 150px;
+}
+.aboutdiscrib .bgimg img{
+    height: 630px;
+    width: 490px;
+    position: relative;
+    bottom: 565px;
+    left: 850px;
+    border-radius: 20px;
+}
+.aboutdiscrib .bgimg3 img{
+    height: 550px;
+    width: 1200px;
+    position: relative;
+    bottom: 460px;
+    left: 145px;
+    border-radius: 20px;
+    
+}
+
+.aboutdiscrib .backbtn{
+    padding: 20px;
+    position: relative;
+    top: 30px;
+    left: 80px;
+    font-size: larger;
+    
+}
+.aboutdiscrib .backbtn a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.311);
+}
+.aboutdiscrib .backbtn  :hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 2px;
+    font-weight: 200px;
+    background-color: rgb(255, 255, 255);
+}

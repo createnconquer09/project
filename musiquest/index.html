@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusiQuest</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=family_name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src=""></script>
+    <!--Navigation-->
+    <nav>
+        
+        <nav role="navigation">
+            <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+              <input type="checkbox" />
+              
+              <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+              <ul id="menu">
+                <a href="#home"><li>Home</li></a>
+                <a href="./about.html"><li>About</li></a>
+                <a href="#guitar"><li>Courses</li></a>
+                <a href="#Contact"><li>Contact</li></a>
+              </ul>
+            </div>
+            <img src="Images/Logo.jpg" alt="Logo">
+          </nav>
+    </nav>
+
+    <!--Home-->
+    <section id="home">
+        <h2>Unleash Your Inner Musician</h2>
+        <p>Discover your passion for music at MusiQuest. Our experienced teachers provide personalized instruction in a
+            supportive environment. Learn to play your favorite instrument, explore different genres, and join a
+            community of like-minded individuals.You can learn to play Guitar, Drums, Keyboard and also put in your
+            request for your desired instrument.</p>
+        <div class="btn">
+            <a class="LM" href="#">Learn More</a>
+            <a class="VC" href="#">Visit Courses</a>
+        </div>
+    </section>
+
+    <!--Awesome Classrooms-->
+    <section id="features">
+        <h1>Awesome Classrooms-</h1>
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="Images/guitar.jpg" alt="Photo 1" />
+                <img id="slide-2" src="Images/drums.jpg" alt="Photo 2" />
+                <img id="slide-3" src="Images/keyboard.jpg" alt="Photo 3" />
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
+        </div>
+    </section>
+
+    <!--Courses-->
+
+    <section id="Courses">
+        <h1>Our Courses-</h1>
+        <div class="course-base">
+            <div class="guitar" id="guitar">
+                <img src="Images/guitar course1.jpg" alt="guitar" srcset="">
+                <h5>Learn Guitar- Beginer to Advanced</h5>
+            </div>
+
+            <div class="drum">
+                <img src="Images/drum course2.jpg" alt="guitar" srcset="">
+                <h5>Learn Drums- Beginer to Advanced</h5>
+
+            </div>
+            <div class="keyboard">
+                <img src="Images/keyboard course3.jpg" alt="guitar" srcset="">
+
+                <h5>Learn Keyboard- Beginer to Advanced</h5>
+            </div>
+
+            <div class="course-box4">
+                    <img src="Images/IMG_20240924_182142.jpg" alt="instruments" srcset="">
+            </div>
+    
+        </div>
+
+        </div>
+
+    </section>
+
+    <!--Contact us-->
+    <section id="Contact">
+        <div class="parent1">
+            <div class="reach-us">
+                <span class="material-symbols-outlined">
+                    pin_drop
+                    </span>
+                <h1>Reach Us</h1>
+                <a href="https://maps.app.goo.gl/JuXYHZcq9741WRJ36">[Click] <br>Address: F2 Jyoti complex, Chandni Chowk, Opp. Ghongade photo studio, Sangli 416416.</a>
+            </div>
+            
+        </div>
+        <div class="parent2">
+            <div class="connect">
+                <span class="material-symbols-outlined">
+                    deskphone
+                    </span>
+                <h1>Contact-us</h1>
+                <p>Contact information- 9373593501 / 8999930000
+                    gmail- musiquestschool <br>@gmail.com</p>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+
+    <footer>
+        <div class="footer-col">
+            <div class="prolinks">
+                <a href="https://rb.gy/7e2go0">
+                <span class="material-symbols-outlined">
+                    nest_heat_link_gen_3
+                </span>
+                 </a>
+
+            </div>
+            <li>[MusiQuest]</li>
+            <p>Copyright ©2021 Images provided by Unsplash.com. All images are licensed under the Unsplash License,
+                which allows for free commercial use and modification without attribution. Learn more at
+                https://unsplash.com/license.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
